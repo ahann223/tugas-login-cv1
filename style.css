@@ -1,0 +1,217 @@
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Halaman Login --- */
+.login-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.error-text {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* --- Halaman CV (Layout & Navbar) --- */
+.cv-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #e9ecef;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #343a40;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.navbar h1 {
+    font-size: 20px;
+}
+
+.btn-logout {
+    padding: 8px 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background-color: #bd2130;
+}
+
+/* --- Container CV --- */
+.cv-container {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.cv-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    font-size: 50px;
+    background: #e2e8f0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin-bottom: 20px;
+}
+
+.cv-section {
+    margin-bottom: 25px;
+}
+
+.cv-section h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.cv-section ul {
+    margin-left: 20px;
+}
+
+.cv-section li {
+    margin-bottom: 8px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #e2e8f0;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+/* --- RESPONSIVE DESIGN (Media Query) --- */
+@media (max-width: 600px) {
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar h1 {
+        font-size: 16px;
+    }
+    
+    .login-container {
+        padding: 20px;
+    }
+/* --- Styling Baru untuk Foto Profil --- */
+.profile-img-new {
+    width: 120px;          /* Atur lebar foto (misal 120px) */
+    height: 120px;         /* Atur tinggi foto yang sama agar proporsional */
+    object-fit: cover;     /* Memastikan foto terpotong rapi tanpa distorsi */
+    border-radius: 50%;    /* Membuat foto berbentuk lingkaran */
+    border: 3px solid #007bff; /* Memberikan border tipis berwarna (opsional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan halus */
+}
+
+/* --- Penyesuaian Responsif untuk Layar Kecil (Mobile) --- */
+@media (max-width: 600px) {
+    .profile-img-new {
+        width: 100px;      /* Perkecil sedikit di layar HP */
+        height: 100px;     /* Pastikan tetap sama */
+        margin-bottom: 15px; /* Tambahkan jarak bawah di tampilan mobile */
+    }
+    
+    .cv-header {
+        flex-direction: column; /* Pastikan susunannya ke bawah */
+        align-items: center;    /* Ratakan ke tengah */
+    }
+}
